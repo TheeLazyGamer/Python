@@ -2,7 +2,7 @@
 
 #******************************************************************************
                   # Imports the date from datetime module.
-            # Imports the exit function from the system module.
+            # Imports the exit function from the system module
 
 from datetime import date
 from sys import exit
@@ -13,9 +13,9 @@ from sys import exit
 yourName = input("Please enter your name: ")
 
 #******************************************************************************
-               # Requires user input for birth month (integer).
+               # Requires user input for birth month (integer)
 
-              # Handles the error occured with invalid data type. 
+            # Handles the error occured with invalid data type. 
 while True:
     try:
         month = int(input("Please enter your month of birth (mm): "))
@@ -24,17 +24,14 @@ while True:
             print("\n Invalid Input. Please try again.")
             
         
-while month > 12:
-    print("\n Invalid Input. Please try again.")
-    month = int(input("Please enter your month of birth (mm): "))
-while month < 1:
+while month < 1 or month > 12:
     print("\n Invalid Input. Please try again.")
     month = int(input("Please enter your month of birth (mm): "))
     
 #******************************************************************************  
-               # Requires user input for birth day (integer).
+               # Requires user input for birth day (integer)
     
-             # Handles the error occured with invalid data type. 
+            # Handles the error occured with invalid data type. 
 while True:
     try:
         day = int(input("Please enter your day of birth (dd): "))
@@ -42,33 +39,21 @@ while True:
     except ValueError:
             print("\n Invalid Input. Please try again.")
         
-while day < 1:
+while day < 1 or day > 31:
+    print("\n Invalid Input. Please try again.")
+    day = int(input("Please enter your day of birth (dd): "))    
+while (month == [1, 3, 5, 7, 8, 10, 12] and day < 1 or day > 31):
     print("\n Invalid Input. Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
-while day > 31:
-    print("\n Invalid Input. Please try again.")
-    day = int(input("Please enter your day of birth (dd): "))       
-while (month == [1, 3, 5, 7, 8, 10, 12] and day > 31):
+while month == [4, 6, 9, 11] and day < 1 or day > 30:
     print("\n Invalid Input. Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
-while (month == [1, 3, 5, 7, 8, 10, 12] and day < 1):
-    print("\n Invalid Input. Please try again.")
-    day = int(input("Please enter your day of birth (dd): "))
-while month == [4, 6, 9, 11] and day > 30:
-    print("\n Invalid Input. Please try again.")
-    day = int(input("Please enter your day of birth (dd): "))
-while month == [4, 6, 9, 11] and day < 1:
-    print("\n Invalid Input. Please try again.")
-    day = int(input("Please enter your day of birth (dd): "))
-while month == 2 and day > 29:
-    print("\n Invalid Input. Please try again.")
-    day = int(input("Please enter your day of birth (dd): "))
-while month == 2 and day < 1:
+while month == 2 and day < 1 or day > 29:
     print("\n Invalid Input. Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
     
 #******************************************************************************
-               # Requires user input for birth year (integer).
+               # Requires user input for birth year (integer)
     
 currentDate = date.today()
 currentYear = currentDate.year
@@ -81,12 +66,9 @@ while True:
     except ValueError:
             print("\n Invalid Input. Please try again.")
             
-while year < 0:
+while year < 0 or year > currentYear:
     print("\n Invalid Input. Please try again.")
     year = int(input("Please enter your year of birth (yyyy): "))
-while year > currentYear:
-    print("\n Invalid Input. Please try again.")
-    year = int(input("Please enter your year of birth (yyyy): "))   
     
 #******************************************************************************
   # Calculates the difference between the current date and users birth date.
