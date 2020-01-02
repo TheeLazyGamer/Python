@@ -25,7 +25,7 @@ while True:
             
         
 while month < 1 or month > 12:
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     month = int(input("Please enter your month of birth (mm): "))
     
 #******************************************************************************  
@@ -40,25 +40,25 @@ while True:
             print("\n Invalid Input. Please try again.")
         
 while day < 1 or day > 31:
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))    
 while (month == [1, 3, 5, 7, 8, 10, 12] and day < 1):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
 while (month == [1, 3, 5, 7, 8, 10, 12] and day > 31):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
 while (month == [4, 6, 9, 11] and day < 1):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
 while (month == [4, 6, 9, 11] and day > 30):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
 while (month == 2 and day < 1):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
 while (month == 2 and day > 29):
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     day = int(input("Please enter your day of birth (dd): "))
     
 #******************************************************************************
@@ -76,7 +76,7 @@ while True:
             print("\n Invalid Input. Please try again.")
             
 while year < 0 or year > currentYear:
-    print("\n Invalid Input. Please try again.")
+    print("\n Outside range - Please try again.")
     year = int(input("Please enter your year of birth (yyyy): "))
     
 #******************************************************************************
