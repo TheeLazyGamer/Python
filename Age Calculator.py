@@ -2,7 +2,7 @@
 
 #******************************************************************************
                   # Imports the date from datetime module.
-            # Imports the exit function from the system module
+            # Imports the exit function from the system module.
 
 from datetime import date
 from sys import exit
@@ -13,9 +13,9 @@ from sys import exit
 yourName = input("Please enter your name: ")
 
 #******************************************************************************
-               # Requires user input for birth month (integer)
+               # Requires user input for birth month (integer).
 
-            # Handles the error occured with invalid data type. 
+              # Handles the error occured with invalid data type. 
 while True:
     try:
         month = int(input("Please enter your month of birth (mm): "))
@@ -32,9 +32,9 @@ while month < 1:
     month = int(input("Please enter your month of birth (mm): "))
     
 #******************************************************************************  
-               # Requires user input for birth day (integer)
+               # Requires user input for birth day (integer).
     
-            # Handles the error occured with invalid data type. 
+             # Handles the error occured with invalid data type. 
 while True:
     try:
         day = int(input("Please enter your day of birth (dd): "))
@@ -68,7 +68,7 @@ while month == 2 and day < 1:
     day = int(input("Please enter your day of birth (dd): "))
     
 #******************************************************************************
-               # Requires user input for birth year (integer)
+               # Requires user input for birth year (integer).
     
 currentDate = date.today()
 currentYear = currentDate.year
